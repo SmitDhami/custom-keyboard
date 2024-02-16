@@ -60,6 +60,9 @@
             android:name=".activity.ExitActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".activity.FirstInstallActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".activity.ThemesActivity"
             android:screenOrientation="portrait" />
         <activity

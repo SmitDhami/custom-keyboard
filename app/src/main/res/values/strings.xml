@@ -2,7 +2,7 @@
 <resources>
 
 
-    <string name="app_name">Smit Demo</string>
+    <string name="app_name">!Phone KeyBoard Theme</string>
     <string name="subtype_en_US">English (KeyBoard iPhone)</string>
 
 
@@ -74,6 +74,7 @@
     <string name="en_table_name">en_table</string>
     <string name="fa_table_name">fa_table</string>
     <string name="freq_column">freq</string>
+    <string name="interstitial_id">ca-app-pub-3680085971210666/3561838937</string>
     <string name="label_activity_ctheme">Customize Theme</string>
     <string name="label_activity_settings">Settings</string>
     <string name="label_btn_enable_keyboard">Enable Keyboard</string>

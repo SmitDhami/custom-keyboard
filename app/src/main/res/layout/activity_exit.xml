@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/home_bg"
-    tools:context="com.keyboardstyle.activity.ExitActivity">
+    tools:context="com.keyboardstyle.os12.keyboard.activity.ExitActivity">
 
 
     <LinearLayout
@@ -15,6 +15,10 @@
         android:gravity="center"
         android:orientation="vertical">
 
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/icon" />
 
         <TextView
             android:id="@+id/xyz"
