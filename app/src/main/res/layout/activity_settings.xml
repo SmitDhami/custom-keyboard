@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_bg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/settings_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_enable_disable"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:id="@+id/iv_arrow"
+                        android:layout_width="@dimen/dp25"
+                        android:layout_height="@dimen/dp25"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:button="@null"
+                        android:src="@drawable/ic_settings"
+                        app:tint="@color/text_black" />
+
+                    <TextView
+                        android:id="@+id/tv_change_keyboard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_toRightOf="@+id/iv_arrow"
+                        android:fontFamily="@font/fonts"
+                        android:text="OS 12 Keyboard Settings"
+                        android:textAllCaps="true"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/sp16"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_auto_capitalize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10">
+
+                    <ImageView
+                        android:id="@+id/iv_cap"
+                        android:layout_width="@dimen/dp20"
+                        android:layout_height="@dimen/dp20"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:button="@null"
+                        android:src="@drawable/cap"
+                        app:tint="@color/text_black" />
+
+                    <TextView
+                        android:id="@+id/tv_cap_heading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_toLeftOf="@+id/checkbox_auto_capitalize"
+                        android:layout_toRightOf="@+id/iv_cap"
+                        android:fontFamily="@font/fonts"
+                        android:text="@string/auto_capitalization"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/sp15"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_cap_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_cap_heading"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_marginTop="@dimen/dp4"
+                        android:layout_toLeftOf="@+id/checkbox_auto_capitalize"
+                        android:layout_toRightOf="@+id/iv_cap"
+                        android:fontFamily="@font/fonts"
+                        android:text="@string/auto_capitalization"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/sp15" />
+
+                    <ImageView
+                        android:id="@+id/checkbox_auto_capitalize"
+                        android:layout_width="@dimen/dp20"
+                        android:layout_height="@dimen/dp20"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/tick" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp4"
+                    android:background="@color/text_black" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_vibrate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10">
+
+                    <ImageView
+                        android:id="@+id/iv_vib"
+                        android:layout_width="@dimen/dp20"
+                        android:layout_height="@dimen/dp20"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:button="@null"
+                        android:src="@drawable/vibrate"
+                        app:tint="@color/text_black" />
+
+                    <TextView
+                        android:id="@+id/tv_vib_heading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_toLeftOf="@+id/checkbox_vibrate"
+                        android:layout_toRightOf="@+id/iv_vib"
+                        android:fontFamily="@font/fonts"
+                        android:text="@string/vibrate_on_keypress"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/sp15"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_vib_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_vib_heading"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_marginTop="@dimen/dp4"
+                        android:layout_toLeftOf="@+id/checkbox_vibrate"
+                        android:layout_toRightOf="@+id/iv_vib"
+                        android:fontFamily="@font/fonts"
+                        android:text="@string/vibrate_on_keypress"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/sp15" />
+
+                    <ImageView
+                        android:id="@+id/checkbox_vibrate"
+                        android:layout_width="@dimen/dp20"
+                        android:layout_height="@dimen/dp20"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/uncheck" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp4"
+                    android:background="@color/text_black" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_popup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10">
+
+                    <ImageView
+                        android:id="@+id/iv_popup"
+                        android:layout_width="@dimen/dp20"
+                        android:layout_height="@dimen/dp20"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/popup"
+                        app:tint="@color/text_black" />
+
+                    <TextView
+                        android:id="@+id/tv_popup_heading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_toLeftOf="@+id/checkbox_popup"
+                        android:layout_toRightOf="@+id/iv_popup"
+                        android:fontFamily="@font/fonts"
+                        android:text="@string/popup_on_keypress"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/sp15"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_popup_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_popup_heading"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_marginTop="@dimen/dp4"
+                        android:layout_toLeftOf="@+id/checkbox_popup"
+                        android:layout_toRightOf="@+id/iv_popup"
+                        android:fontFamily="@font/fonts"
+                        android:text="@string/popup_on_keypress"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/sp15" />
+
+                    <ImageView
+                        android:id="@+id/checkbox_popup"
+                        android:layout_width="@dimen/dp20"
+                        android:layout_height="@dimen/dp20"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/uncheck" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp4"
+                    android:background="@color/text_black" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_sound"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10">
+
+                    <ImageView
+                        android:id="@+id/iv_sound"
+                        android:layout_width="@dimen/dp20"
+                        android:layout_height="@dimen/dp20"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/sound"
+                        app:tint="@color/text_black" />
+
+                    <TextView
+                        android:id="@+id/tv_sound_heading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_toLeftOf="@+id/checkbox_sound"
+                        android:layout_toRightOf="@+id/iv_sound"
+                        android:fontFamily="@font/fonts"
+                        android:text="@string/sound_on_keypress"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/sp15"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_sound_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_sound_heading"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_marginTop="@dimen/dp4"
+                        android:layout_toLeftOf="@+id/checkbox_sound"
+                        android:layout_toRightOf="@+id/iv_sound"
+                        android:fontFamily="@font/fonts"
+                        android:text="@string/sound_on_keypress"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/sp15" />
+
+                    <ImageView
+                        android:id="@+id/checkbox_sound"
+                        android:layout_width="@dimen/dp20"
+                        android:layout_height="@dimen/dp20"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/uncheck" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp4"
+                    android:layout_marginBottom="@dimen/dp30"
+                    android:background="@color/colorDivider" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_speech"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_speech"
+                        android:layout_width="@dimen/dp20"
+                        android:layout_height="@dimen/dp20"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/mic"
+                        app:tint="@color/text_black" />
+
+                    <TextView
+                        android:id="@+id/tv_speech_heading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_toLeftOf="@+id/checkbox_speech"
+                        android:layout_toRightOf="@+id/iv_speech"
+                        android:text="@string/voice_to_text"
+                        android:textSize="@dimen/sp15"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_speech_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_speech_heading"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_marginTop="@dimen/dp4"
+                        android:layout_toLeftOf="@+id/checkbox_speech"
+                        android:layout_toRightOf="@+id/iv_speech"
+                        android:text="@string/voice_to_text"
+                        android:textColor="@color/colorDescription"
+                        android:textSize="@dimen/sp15" />
+
+                    <ImageView
+                        android:id="@+id/checkbox_speech"
+                        android:layout_width="@dimen/dp20"
+                        android:layout_height="@dimen/dp20"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/uncheck"
+                        app:tint="@color/text_black" />
+                </RelativeLayout>
+            </LinearLayout>
+
+         </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

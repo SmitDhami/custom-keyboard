@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp10"
+    android:backgroundTint="@color/card_bg"
+    android:orientation="vertical"
+    app:cardElevation="5dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginVertical="5dp"
+            android:gravity="center"
+            android:text="Exit!"
+            android:fontFamily="@font/fonts"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icon" />
+
+            <TextView
+                android:id="@+id/txt_dias"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp70"
+                android:layout_marginHorizontal="10dp"
+                android:fontFamily="@font/fonts"
+                android:gravity="center"
+                android:text="Are you sure you want to exit...?"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_margin="10.0dip"
+                app:cardCornerRadius="8dp"
+                app:cardUseCompatPadding="true">
+
+                <Button
+                    android:id="@+id/nobtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/light_gray"
+                    android:clickable="true"
+                    android:fontFamily="@font/fonts"
+                    android:text="No"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_margin="10.0dip"
+                app:cardCornerRadius="8dp"
+                app:cardUseCompatPadding="true">
+
+                <Button
+                    android:id="@+id/yesbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/light_gray"
+                    android:clickable="true"
+                    android:fontFamily="@font/fonts"
+                    android:text="Yes"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

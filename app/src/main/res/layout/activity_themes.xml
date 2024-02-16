@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_themes"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_bg">
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/banner_container" />
+
+    <TextView
+        android:id="@+id/btn_personlise"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/banner_container"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp10"
+        android:background="@drawable/btn_background"
+        android:fontFamily="@font/fonts"
+        android:gravity="center"
+        android:text="Apply  Theme"
+        android:textColor="@color/background_color"
+        android:textSize="@dimen/dp22" />
+
+    <RelativeLayout
+        android:id="@+id/banner_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginVertical="2dp"
+        android:gravity="center" />
+
+</RelativeLayout>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_bg">
+
+    <RelativeLayout
+        android:id="@+id/banner_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:id="@+id/btns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp70"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/button1"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="15dp"
+            android:background="@drawable/btn_background"
+            android:padding="@dimen/dp10"
+            android:src="@drawable/keyboard_gallery"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/button2"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="15dp"
+            android:background="@drawable/btn_background"
+            android:padding="10dp"
+            android:src="@drawable/key_text"
+            app:tint="@color/white" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_bg_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btns"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginBottom="@dimen/dp10"
+        android:fontFamily="@font/fonts"
+        android:text="Adjust Background Opacity"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/dp20" />
+
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_bg_heading"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/tv_opacity_value"
+        android:indeterminate="false"
+        android:max="250"
+        android:progressDrawable="@drawable/styled_progress"
+        android:thumb="@drawable/ic_brightness_1_black_24dp" />
+
+    <TextView
+        android:id="@+id/tv_opacity_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_bg_heading"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp30"
+        android:text="200%"
+        android:textColor="@color/text_black" />
+
+    <TextView
+        android:id="@+id/tv_key_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBar1"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/fonts"
+        android:text="Adjust Keys Opacity"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/dp20" />
+
+    <SeekBar
+        android:id="@+id/seekBar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_key_heading"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/tv_opacity_value"
+        android:indeterminate="false"
+        android:max="250"
+        android:progressDrawable="@drawable/styled_progress"
+        android:thumb="@drawable/ic_brightness_1_black_24dp" />
+
+    <TextView
+        android:id="@+id/tv_opacity_value2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_key_heading"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp30"
+        android:text="200%"
+        android:textColor="@color/text_black" />
+
+    <RelativeLayout
+        android:id="@+id/rl_keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/keyboard_panel"
+            android:layout_alignBottom="@+id/keyboard_panel"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:id="@+id/keyboard_panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/top_bar"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@android:color/transparent" />
+
+            <RelativeLayout
+                android:id="@+id/rl_menu"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#B3FFFFFF"
+                android:gravity="left|center_vertical|center_horizontal|center"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <ImageView
+                    android:id="@+id/btn_insert_emoticon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_insert_emoticon"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/btn_voice"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/btn_insert_emoticon"
+                    android:contentDescription="@null"
+                    android:src="@drawable/microphone"
+                    android:visibility="gone" />
+
+
+                <ImageView
+                    android:id="@+id/btn_theme"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="@dimen/dp8"
+                    android:src="@drawable/theme" />
+
+                <ImageView
+                    android:id="@+id/btn_settings"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_margin="@dimen/dp8"
+                    android:src="@drawable/ic_settings" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/bottom_bar"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="5dp"
+                android:background="@android:color/transparent" />
+
+            <com.android.keyboard.LatinKeyboardView
+                android:id="@+id/keyboard"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:background="@android:color/transparent"
+                android:keyPreviewLayout="@layout/key_preview" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
